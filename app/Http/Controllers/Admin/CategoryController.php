@@ -88,9 +88,9 @@ class CategoryController extends Controller
       }
    
    }
-   public function destroy($category_id)
+   public function destroy(Request $request)
    {
-      $category = Category::find($category_id);
+      $category = Category::find($request->category_delete_id);
       if($category)
       {
         
@@ -99,10 +99,10 @@ class CategoryController extends Controller
             {
             File::delete($destination);
             }
-         
+         $category->posts()->delete();
          $category->delete();
 
-         return redirect('admin/category')->with('message','Category Deleted Successfully');
+         return redirect('admin/category')->with('message','Category Deleted With It Posts Successfully');
       }
       else
       {

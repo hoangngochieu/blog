@@ -32,12 +32,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
 
     route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class,'index']);
+
     route::get('/category', [App\Http\Controllers\Admin\CategoryController::class,'index']);
     route::get('/add-category', [App\Http\Controllers\Admin\CategoryController::class,'create']);
     route::post('/add-category', [App\Http\Controllers\Admin\CategoryController::class,'store']);
     route::get('/edit-category/{category_id}', [App\Http\Controllers\Admin\CategoryController::class,'edit']);    
     route::put('/update-category/{category_id}', [App\Http\Controllers\Admin\CategoryController::class,'update']);
-    route::get('/delete-category/{category_id}', [App\Http\Controllers\Admin\CategoryController::class,'destroy']);
+    // route::get('/delete-category/{category_id}', [App\Http\Controllers\Admin\CategoryController::class,'destroy']);
+    route::post('delete-category/', [App\Http\Controllers\Admin\CategoryController::class,'destroy']);
 
     route::get('posts', [App\Http\Controllers\Admin\PostController::class,'index']);
     route::get('add-post', [App\Http\Controllers\Admin\PostController::class,'create']);
