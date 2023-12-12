@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title',"HLE Book Review Website")
-@section('meta_description',"HLE Book Review Website")
-@section('meta_keyword',"HLE Book Review Website")
+@section('title',"$setting->meta_title")
+@section('meta_description',"$setting->meta_description")
+@section('meta_keyword',"$setting->meta_keyword")
 
 @section('content')
 
@@ -16,7 +16,7 @@
                   <div class="item">
                     <a class="text-decoration-none" href="{{url('tutorial/'.$all_cate_item->slug)}}">
                         <div class="card">
-                            <img src="{{asset('uploads/category/'.$all_cate_item->image)}}" alt="Image">
+                            <img height="250px" src="{{asset('uploads/category/'.$all_cate_item->image)}}" alt="Image">
                             <div class="card-body text-center">
                                 <h5>{{$all_cate_item->name}}</h5>
                         

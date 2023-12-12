@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Blog') }}</title>
+    <title>{{ config('Blog ', 'Blog Dashboard') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -38,6 +38,21 @@
        div.dataTables_wrapper div.dataTables_length select{
         width: 50% !important; 
        }
+
+       .post-code-bg {
+          
+            min-width: 100%;
+            background-color: #1e1e1e !important;
+            width: 100% !important;
+            overflow-x: scroll !important;
+            position: relative;
+            padding: 1rem 1rem;
+            margin-bottom: 1em;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+            /* width: fit-content !; */
+            word-break: break-all !important;
+        }
     </style>
 
 </head>

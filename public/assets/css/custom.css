@@ -52,3 +52,23 @@
 .bg-gray{
     background-color: #ddd;
 }
+.post-description{
+    overflow-y: scroll;
+    scrollbar-width: none !important;
+    width: auto;
+}
+
+.post-code-bg {
+   
+    min-width: 100%;
+    background-color: #1e1e1e !important;
+    width: 100% !important;
+    overflow-x: scroll !important;
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1em;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    /* width: fit-content !important; */
+    word-break: break-all !important;
+}

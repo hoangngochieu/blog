@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="section text-center py-3">
+
+    @if(session('message'))
+    <h6 class="alert alert-warning mb-3">{{session('message')}}</h6>
+    @endif
+</div>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -8,6 +16,7 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
+                  
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -17,6 +26,7 @@
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
+                          
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

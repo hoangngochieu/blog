@@ -2,20 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Auth::routes();
 
@@ -23,6 +10,15 @@ Route::get('/', [App\Http\Controllers\FrontendController::class, 'index']);
 Route::get('/tutorial/{category_slug}', [App\Http\Controllers\FrontendController::class, 'viewCategoryPost']);
 Route::get('/tutorial/{category_slug}/{post_slug}', [App\Http\Controllers\FrontendController::class, 'viewPost']);
 
+
+
+//Comment 
+
+Route::post('/comments', [App\Http\Controllers\Frontend\CommentController::class, 'store']);
+Route::post('/delete-comment', [App\Http\Controllers\Frontend\CommentController::class, 'destroy']);
+
+// Route::get('/update-comment',[App\Http\Controllers\Frontend\CommentController::class, 'edit']);
+Route::post('/update-comment',[App\Http\Controllers\Frontend\CommentController::class, 'update']);
 
 
 
@@ -50,7 +46,11 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
 
     route::get('/users',[App\Http\Controllers\Admin\UserController::class,'index']);
     route::get('/user/{user_id}',[App\Http\Controllers\Admin\UserController::class,'edit']); 
-    route::put('/update-user/{user_id}',[App\Http\Controllers\Admin\UserController::class,'update']);      
+    route::put('/update-user/{user_id}',[App\Http\Controllers\Admin\UserController::class,'update']); 
+    
+
+    route::get('/settings',[App\Http\Controllers\Admin\SettingController::class,'index']); 
+    route::post('/settings',[App\Http\Controllers\Admin\SettingController::class,'savedata']); 
     
 });
 

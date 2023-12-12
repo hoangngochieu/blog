@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title','Category')
-@section('content');
+@section('content')
 
 <div class="container-fluid px-4">
     <div class="card mt-4">

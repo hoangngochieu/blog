@@ -11,8 +11,14 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('meta_description')">
     <meta name="keywords" content="@yield('meta_keyword')">
+    <meta name="author" content="ngochieu22ad">
+    @php
+     $setting = App\Models\Setting::all()->first();
+    @endphp
+    @if ($setting)
+    <link rel="shortcut icon" href="{{url('uploads/settings/'.$setting->favicon)}}" type="image/x-icon"> 
+    @endif
 
-    <meta name="author" content="HLE IT">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -29,6 +35,7 @@
 
     <link href="{{asset('assets/css/owl.carousel.min.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/css/owl.theme.default.min.css')}}" rel="stylesheet" />
+    
 
 </head>
 
@@ -61,7 +68,7 @@
             dots:false,
             responsive: {
                 0: {
-                    items: 1
+                    items: 2
                 },
                 600: {
                     items: 3
@@ -72,7 +79,7 @@
             }
         })
     </script>
-
+    @yield('scripts')
 </body>
 
 </html>
