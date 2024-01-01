@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\FrontendController::class, 'index']);
-Route::get('/tutorial/{category_slug}', [App\Http\Controllers\FrontendController::class, 'viewCategoryPost']);
-Route::get('/tutorial/{category_slug}/{post_slug}', [App\Http\Controllers\FrontendController::class, 'viewPost']);
+Route::get('/{category_slug}', [App\Http\Controllers\FrontendController::class, 'viewCategoryPost']);
+Route::get('/{category_slug}/{post_slug}', [App\Http\Controllers\FrontendController::class, 'viewPost']);
 
 
 
@@ -42,7 +42,8 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     route::post('add-post', [App\Http\Controllers\Admin\PostController::class,'store']);
     route::get('/post/{post_id}',[App\Http\Controllers\Admin\PostController::class,'edit']);
     route::put('/update-post/{post_id}',[App\Http\Controllers\Admin\PostController::class,'update']);
-    route::get('/delete-post/{post_id}',[App\Http\Controllers\Admin\PostController::class,'destroy']);
+    // route::get('/delete-post/{post_id}',[App\Http\Controllers\Admin\PostController::class,'destroy']);
+    route::post('delete-post/',[App\Http\Controllers\Admin\PostController::class,'destroy']);
 
     route::get('/users',[App\Http\Controllers\Admin\UserController::class,'index']);
     route::get('/user/{user_id}',[App\Http\Controllers\Admin\UserController::class,'edit']); 

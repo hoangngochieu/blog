@@ -25,6 +25,7 @@
         </div>
     </div>
 </div>
+<!-- End Modal -->
 
 <div class="container-fluid px-4">
     <div class="card mt-4">

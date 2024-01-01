@@ -32,6 +32,9 @@
 
                     <tbody>
                         @foreach ($users as $item)
+                        @if ($item->role_as== '0')
+                            
+                     
                         <tr>
                             <td>  {{$item->id}}  </td>
                             <td>  {{$item->name}}  </td>
@@ -42,6 +45,7 @@
                             </td>
                             
                         </tr> 
+                        @endif
                         @endforeach
                         
                     </tbody>

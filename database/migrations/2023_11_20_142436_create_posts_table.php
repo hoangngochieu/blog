@@ -13,6 +13,8 @@ return new class extends Migration {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->integer('category_id');
+
+            // $table->foreign('category_id')->references('id')->on('categories'); 
             $table->string('name');
             $table->string('slug');
             $table->mediumText('description');

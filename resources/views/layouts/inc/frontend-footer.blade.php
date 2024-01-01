@@ -4,25 +4,25 @@
             <div class="col-md-6">
                 <h5>HLE Book </h5>
                 <div class="underline"></div>
-                <p>        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias odit consequat
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quos nemo cupiditate ipsam cumque, veritatis libero incidunt beatae id vitae impedit earum voluptates repellendus rem vel excepturi neque autem qui!                  
+                <p>     
+                    Tôi viết mọi thứ rất ngẫu hứng. Nếu muốn đọc các bài viết một cách có hệ thống, xin vui lòng xem mục lục phía trên.
                 </p>
             </div>
          <div class="col-md-3">
                 <h5>Quick Links</h5>
                 <div class="underline"></div>
-                <div><a href="" class="text-white">Home</a></div>
-                <div><a href="" class="text-white">About Us</a></div>
-                <div><a href="" class="text-white">Contact Us</a></div>
-                <div><a href="" class="text-white">Needs Promotion ?</a></div>
+                <div><a  class="text-white text-decoration-none">Trang chủ</a></div>
+                <div><a href="" class="text-white text-decoration-none">Về bản thân tôi</a></div>
+                <div><a href="" class="text-white text-decoration-none">Liên hệ</a></div>
+                <div><a href="" class="text-white text-decoration-none">Điều khoản và chính sách ?</a></div>
             </div>
             <div class="col-md-3">
-                <h5>Follow Us On</h5>
+                <h5>Theo dõi tôi tại</h5>
                 <div class="underline"></div>
-                <div><a href="" class="text-white">Facebook</a></div>
-                <div><a href="" class="text-white">Instagram</a></div>
-                <div><a href="" class="text-white">Linkedin</a></div>
-                <div><a href="" class="text-white">Twitter</a></div>
+                <div><a href="" class="text-white text-decoration-none">Facebook</a></div>
+                <div><a href="" class="text-white text-decoration-none">Instagram</a></div>
+                <div><a href="" class="text-white text-decoration-none">Linkedin</a></div>
+                <div><a href="" class="text-white text-decoration-none">Twitter</a></div>
             </div>
         </div>
     </div>

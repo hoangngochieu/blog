@@ -36,6 +36,7 @@ class PostController extends Controller
 
         $post->meta_title = $request->meta_title;
         $post->meta_description = $request->meta_description;
+        
         $post->meta_keyword = $request->meta_keyword;
 
         $post->status = $request->status == true ?'1':'0';
@@ -74,9 +75,9 @@ class PostController extends Controller
         return redirect('admin/posts')->with('message','Post Updated Successfully');
     }
 
-    public function destroy($post_id)
+    public function destroy(Request $request)
     {
-       $post = Post::find($post_id);
+       $post = Post::find($request->post_delete_id);
        if($post)
        {
          
@@ -85,14 +86,14 @@ class PostController extends Controller
             //  {
             //  File::delete($destination);
             //  }
-          
+          $post->comments()->delete();
           $post->delete();
  
           return redirect('admin/posts')->with('message','Post Deleted Successfully');
        }
        else
        {
-          return redirect('admin/posts')->with('message','NO Post Id Found');
+          return redirect('admin/posts')->with('message','No Post Id Found');
        }
     }
 

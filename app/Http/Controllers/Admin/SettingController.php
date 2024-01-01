@@ -18,7 +18,7 @@ class SettingController extends Controller
     public function savedata(Request $request)
     {
         $validator = Validator::make($request->all(),[
-            'website_name' =>'required|max:255',
+            'website_name' =>'nullable|max:255',
             'website_logo' =>'nullable|max:255',
             'website_favicon' => 'nullable',
             'description' => 'nullable',

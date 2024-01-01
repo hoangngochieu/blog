@@ -63,7 +63,7 @@
             </div>
             <div class="mb-3">
                 <label for="">Meta Keyword</label>
-                <textarea name="meta_Keyword" class="form-control" rows="3"></textarea>
+                <textarea name="meta_keyword" class="form-control" rows="3"></textarea>
             </div>
 
             <h4>Status</h4>

@@ -56,7 +56,7 @@
           @endphp
           @foreach ($categories as $cateitem)
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{url('tutorial/'.$cateitem->slug)}}">{{$cateitem->name}}</a>
+              <a class="nav-link active" aria-current="page" href="{{url('/'.$cateitem->slug)}}">{{$cateitem->name}}</a>
             </li>
           @endforeach
 
