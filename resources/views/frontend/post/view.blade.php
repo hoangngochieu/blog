@@ -118,9 +118,11 @@
                     </div>
                     <div class="card-body">
                         @foreach ($latest_posts as $latest_post_item)
-                        <a href="{{url('/'.$latest_post_item->category->slug.'/'.$latest_post_item->slug)}}"
+                        <a href="{{url('/blog/'.$latest_post_item->category->slug.'/'.$latest_post_item->slug)}}"
                             class="text-decoration-none">
-                            <h6>{{$latest_post_item->name}}</h6>
+                            <h6>{{$latest_post_item->name}} || {{$latest_post_item->created_at}}<h6>
+                          
+                           
                         </a>
                         @endforeach
                     </div>

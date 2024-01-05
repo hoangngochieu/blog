@@ -19,7 +19,7 @@
                 @forelse ($post as $postitem)
                 <div class="card card-shadow mt-4 ">
                     <div class="card-body">
-                        <a href="{{url('/'.$category->slug.'/'.$postitem->slug)}} " class="text-decoration-none">
+                        <a href="{{url('/blog/'.$category->slug.'/'.$postitem->slug)}} " class="text-decoration-none">
                             <h2 class="post-heading ">{{$postitem->name}}</h2>
                         </a>
                       <h6 >Posted on: {{$postitem->created_at->format('d-m-Y')}}</h6>

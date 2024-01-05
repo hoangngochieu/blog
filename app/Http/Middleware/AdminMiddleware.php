@@ -22,6 +22,7 @@ class AdminMiddleware
             if (Auth::user()->role_as =='1') 
             {
                 return $next($request);
+              
             }
             else
             

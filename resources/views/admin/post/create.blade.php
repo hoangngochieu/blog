@@ -47,10 +47,7 @@
                 <label for="">Description</label>
                 <textarea name="description" id="mySummernote" class="form-control" rows="4"></textarea>
             </div>
-            <div class="mb-3">
-                <label for="">Youtube Iframe Link</label>
-                <input type="text" name="yt_iframe" class="form-control" />
-            </div>
+          
             
             <h4>SEO-Tags</h4>
             <div class="mb-3">

@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\FrontendController::class, 'index']);
-Route::get('/{category_slug}', [App\Http\Controllers\FrontendController::class, 'viewCategoryPost']);
-Route::get('/{category_slug}/{post_slug}', [App\Http\Controllers\FrontendController::class, 'viewPost']);
+Route::get('/blog/{category_slug}', [App\Http\Controllers\FrontendController::class, 'viewCategoryPost']);
+Route::get('/blog/{category_slug}/{post_slug}', [App\Http\Controllers\FrontendController::class, 'viewPost']);
 
 
 
@@ -54,4 +54,4 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     route::post('/settings',[App\Http\Controllers\Admin\SettingController::class,'savedata']); 
     
 });
-
+?>
